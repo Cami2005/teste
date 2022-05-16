@@ -1,23 +1,46 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import {Link} from 'react-router-dom'
+
+function dobro(numero){
+  if (isNaN(numero))
+     return "erro";
+  else
+     return numero *2;
+}
+
+
 
 function App() {
+  const [numero, setNumero] = useState(0);
+  const [resposta, setResposta] = useState(0);
+
+
+function calcularClick(){
+  let x = dobro(numero);
+  setResposta(x);
+}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     
+     <div>
+       <Link to='/'> Voltar para menu</Link> 
+       <h1> bom dia</h1>
+        <h2> Calcule o Dobro</h2>
+        <h3> Insira o valor:</h3>    
+        <div>
+          <label> Número: </label>
+          <input type="text" 
+          value={numero} onChange={e => setNumero(Number(e.target.value))} 
+          />
+        
+        </div>  
+        <button className="botao" onClick ={calcularClick} > Calcular</button>
+        <div>O resultado é <span> {resposta} </span> </div>      
+     </div>
+
     </div>
   );
 }
