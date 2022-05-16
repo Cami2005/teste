@@ -28,6 +28,8 @@ function calcularClick(){
      <div>
        <Link to='/'> Voltar para menu</Link> 
        <h1> bommmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmdiaaaaaaaaaaaaagjhgjhgjhg</h1>
+       <p>Olha a animação da pessoa
+       </p>
         <h2> Calcule o Dobro</h2>
         <h3> Insira o valor:</h3>    
         <div>
